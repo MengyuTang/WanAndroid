@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.KnowledgeDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/knowledge_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="top"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/knowledge_toolBar"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:layout_height="?android:attr/actionBarSize">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        app:layout_constraintTop_toBottomOf="@id/knowledge_appBar"
+        android:layout_width="match_parent"
+        app:layout_constraintHeight_percent="0.99"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_height="0dp">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/knowledge_tab"
+            app:tabMode="scrollable"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            android:layout_height="50dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/knowledge_vPager"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.constraint.ConstraintLayout>

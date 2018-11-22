@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/project_tab"
+        app:tabMode="scrollable"
+        android:layout_gravity="top"
+        android:background="@color/colorPrimary"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ry_projects"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/projects_toTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="70dp"
+        android:src="@mipmap/to_top"
+        android:layout_gravity="end|bottom"
+        app:layout_behavior="com.example.fpm0322.wanandroid.utils.ScaleDownShowBehavior" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
